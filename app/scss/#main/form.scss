@@ -1,0 +1,110 @@
+.form {
+    max-width: 680px;
+    padding: 25px 20px;
+    background: #fff;
+    box-shadow: 0px 5px 20px rgba(47, 68, 78, 0.14);
+    border-radius: 3px;
+    &__title {
+        margin-bottom: 25px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 16px;
+        color: $titleColor;
+    }
+    &__manage {
+        margin-bottom: 22px;
+    }
+    &__label {
+        display: block;
+        margin-bottom: 25px;
+        position: relative;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        &-title {
+            padding: 0 8px;
+            font-weight: 300;
+            font-size: 12px;
+            line-height: 27px;
+            position: absolute;
+            top: -12px;
+            left: 16px;
+            background: #fff;
+        }
+        input {
+            display: block;
+            padding: 12px 18px;
+            width: 100%;
+            border: 1px solid rgba($titleColor, 0.2);
+            box-sizing: border-box;
+            border-radius: 3px;
+            font-weight: 300;
+            font-size: 16px;
+            line-height: 27px;
+            display: flex;
+            align-items: center;
+            color: $textColor;
+            outline: none;
+            &::placeholder {
+                color: rgba($textColor, 0.4);
+            }
+            &:focus {
+                border: 1px solid $titleColor;
+            }
+        }
+    }
+    .send-btn {
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 20px;
+        padding: 15px;
+        font-size: 16px;
+        line-height: 21px;
+    }
+    &__descr {
+        font-weight: 300;
+        font-size: 10px;
+        line-height: 13px;
+        color: $textColor;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .form {
+        padding: 40px 37px 45px;
+        &__manage {
+            margin-bottom: 35px;
+        }
+        &__label {
+            margin-bottom: 35px;
+            &-title {
+                left: 25px;
+                font-size: 15px;
+                line-height: 27px;
+            }
+            input {
+                padding: 18px 28px;
+                font-size: 30px;
+                line-height: 30px;
+            }
+        }
+        &__footer {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            .send-btn {
+                margin-bottom: 0;
+                padding: 21px 15px;
+                width: 274px;
+                min-width: 274px;
+                font-size: 13px;
+                line-height: 21px;
+            }
+        }
+        &__descr {
+            width: calc(100% - 304px);
+            font-size: 11px;
+            line-height: 13px;
+        }
+    }
+}

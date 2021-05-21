@@ -1,0 +1,28 @@
+.send-btn {
+    max-width: 132px;
+    display: block;
+    padding: 10px 12px;
+    background: $accent;
+    border-radius: 3px;
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 11px;
+    text-transform: uppercase;
+    color: #fff;
+    text-align: center;
+    &:hover,
+    &:focus {
+        transition: $transition;
+        background: #75A637;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .send-btn {
+        width: 197px;
+        max-width: 197px;
+        padding: 13px;
+        font-size: 13px;
+        line-height: 21px;
+    }
+}

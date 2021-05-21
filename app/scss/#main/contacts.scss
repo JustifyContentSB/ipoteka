@@ -1,0 +1,130 @@
+.contacts {
+    padding-bottom: 40px;
+    margin-top: 20px;
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 100%;
+    color: $titleColor;
+    &__title {
+        margin-bottom: 25px;
+        font-weight: 900;
+        font-size: 19px;
+        line-height: 24px;
+        text-transform: uppercase;
+        color: $titleColor;
+    }
+    &__map {
+        margin-bottom: 23px;
+        min-height: 367px;
+        background: url('../../images/contacts/map.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    &__street {
+        margin-bottom: 20px;
+    }
+    &__doc {
+        margin-bottom: 20px;
+    }
+    &__time {
+        margin-bottom: 20px;
+    }
+    &__name {
+        margin-bottom: 17px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 18px;
+        color: $titleColor;
+    }
+    &__address {
+        font-style: normal;
+        &-title {
+            margin-bottom: 10px;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 100%;
+            color: $textColor;
+        }
+    }
+    &__tel {
+        display: inline-block;
+        margin-bottom: 20px;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 100%;
+        color: $titleColor;
+        transition: $transition;
+        &:hover,
+        &:focus {
+            transform: scale(1.07);
+        }
+    }
+    &__email {
+        a {
+            font-weight: 300;
+            font-size: 14px;
+            line-height: 100%;
+            text-decoration-line: underline;
+            color: $accent;
+            &:hover,
+            &:focus {
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .contacts {
+        margin-top: 100px;
+        margin-bottom: 150px;
+        &__title {
+            margin-bottom: 40px;
+            font-size: 40px;
+            line-height: 48px;
+        }
+        &__about {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        &__map {
+            width: 710px;
+            min-width: 710px;
+            min-height: 502px;
+            margin-bottom: 0;
+        }
+        &__name {
+            margin-bottom: 20px;
+            font-size: 28px;
+            line-height: 30px;
+        }
+        &__address {
+            width: calc(100% - 760px);
+            font-size: 18px;
+            line-height: 30px;
+            display: flex;
+            flex-direction: column;
+            &-title {
+                margin-bottom: 0;
+                font-size: 15px;
+                line-height: 27px;
+            }
+        }
+        &__time {
+            margin-bottom: 40px;
+        }
+        &__tel {
+            font-size: 40px;
+            line-height: 40px;
+        }
+        &__email {
+            margin-top: auto;
+            a {
+                font-size: 18px;
+                line-height: 30px;
+            }
+        }
+    }
+}

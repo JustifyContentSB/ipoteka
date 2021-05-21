@@ -1,0 +1,26 @@
+$accent: #8BC540;
+$titleColor: #2F444E;
+$textColor: #869399;
+$transition: all .2s ease;
+
+%linkHover {
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 0;
+    height: 1px;
+    background: #fff;
+    transition: $transition;
+  }
+  &:hover,
+  &:focus {
+    &::after {
+      width: 100%;
+      right: auto;
+      left: 0;
+    }
+  }
+}

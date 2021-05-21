@@ -1,0 +1,99 @@
+.faq {
+    margin-bottom: 35px;
+    &__info {
+        margin-bottom: 30px;
+    }
+    &__title {
+        margin-bottom: 20px;
+        color: $titleColor;
+        font-weight: 900;
+        font-size: 24px;
+        line-height: 30px;
+        text-transform: uppercase;
+    }
+    &__list {
+        font-size: 14px;
+        line-height: 17px;
+        color: $textColor;
+    }
+    &__item {
+        padding: 12px 0 15px;
+        border-bottom: 1px solid rgba($textColor, 0.2);
+        cursor: pointer;
+    }
+    &__question {
+        padding-right: 45px;
+        margin-bottom: 10px;
+        position: relative;
+        &::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 17px;
+            height: 10px;
+            background: url('../../images/icons/faq-arrow.svg');
+            background-repeat: no-repeat;
+            background-size: contain;
+            transition: $transition;
+        }
+        &.active {
+            &::after {
+                transform: rotate(180deg) translateY(-50%);
+            }
+        }
+    }
+    &__answer {
+        height: 0;
+        opacity: 0;
+        overflow: hidden;
+        transition: $transition;
+        &.active {
+            height: auto;
+            opacity: 1;
+            overflow: visible;
+        }
+    }
+    &__descr {
+        margin-bottom: 30px;
+        font-weight: 300;
+        font-size: 13px;
+        line-height: 16px;
+        color: $textColor;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .faq {
+        margin-bottom: 140px;
+        &__inner {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+        &__info {
+            width: calc(100% - 720px);
+            margin-bottom: 0;
+        }
+        &__credit {
+            width: 680px;
+        }
+        &__descr {
+            margin-bottom: 40px;
+            font-size: 15px;
+            line-height: 27px;
+        }
+        &__title {
+            font-size: 46px;
+            line-height: 46px;
+        }
+        &__question {
+            font-size: 17px;
+            line-height: 22px;
+        }
+        &__item {
+            padding: 44px 0 20px;
+        }
+    }
+}

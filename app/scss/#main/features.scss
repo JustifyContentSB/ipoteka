@@ -1,0 +1,180 @@
+.features {
+    &__list {
+        margin-bottom: 30px;
+        &-item {
+            margin-bottom: 10px;
+            padding: 16px 20px 20px;
+            background: #fff;
+            box-shadow: 0px 2.96736px 11.8694px rgba(47, 68, 78, 0.14);
+            border-radius: 2px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        &-title {
+            margin-bottom: 15px;
+            padding-left: 57px;
+            min-height: 36px;
+            color: $titleColor;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 15px;
+            position: relative;
+            &::before {
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                width: 36px;
+                height: 36px;
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-image: url('../../images/features/features-icon.svg');
+            }
+            span {
+                display: block;
+                position: relative;
+                padding-bottom: 12px;
+                &::after {
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 40px;
+                    height: 3px;
+                    background: $accent;
+                    border-radius: 6px;
+                }
+            }
+        }
+        &-text {
+            color: $textColor;
+            font-weight: 300;
+            font-size: 12px;
+            line-height: 15px;
+        }
+    }
+    &__checklist {
+        max-width: 264px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        &-item {
+            width: 117px;
+            max-width: 117px;
+            margin-bottom: 30px;
+            &:nth-child(odd) {
+                margin-right: 30px;
+            }
+        }
+        &-num {
+            margin-bottom: 10px;
+            display: block;
+            font-weight: 900;
+            font-size: 50px;
+            line-height: 50px;
+            letter-spacing: -0.05em;
+            color: rgba(#2F444E, 0.2);
+        }
+        &-text {
+            color: $titleColor;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 14px;
+        }
+    }
+    &--desktop {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .features {
+        &__list {
+            display: flex;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            &-item {
+                width: calc(25% - 13px);
+                margin-bottom: 13px;
+                margin-right: 13px;
+                &:last-child {
+                    margin-bottom: 13px;
+                }
+                &:nth-child(4n) {
+                    margin-right: 0;
+                }
+            }
+            &-title {
+                padding-left: 0;
+                padding-top: 70px;
+                &::before {
+                    width: 60px;
+                    height: 60px;
+                }
+            }
+        }
+        &__checklist {
+            max-width: 100%;
+            width: 100%;
+            &-item {
+                max-width: 25%;
+                width: 25%;
+                margin-right: 0;
+                &:nth-child(odd) {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .features {
+        margin-bottom: 35px;
+        &__list {
+            margin-bottom: 75px;
+            &-item {
+                padding: 32px 35px 35px;
+            }
+            &-title {
+                margin-bottom: 20px;
+                font-size: 24px;
+                line-height: 26px;
+                span {
+                    &::after {
+                        width: 71px;
+                        height: 4px;
+                        border-radius: 10px;
+                    }
+                }
+            }
+            &-text {
+                font-size: 14px;
+                line-height: 22px;
+            }
+        }
+        &__checklist {
+            &-item {
+                display: flex;
+                align-items: center;
+            }
+            &-num {
+                margin: 0;
+                font-size: 76px;
+                line-height: 60px;
+                letter-spacing: -0.05em;
+            }
+            &-text {
+                width: 120px;
+                margin-left: 8px;
+                font-size: 16px;
+                line-height: 20px;
+            }
+        }
+        &--desktop {
+            display: block;
+            margin-bottom: 150px;
+        }
+    }
+}

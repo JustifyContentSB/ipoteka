@@ -1,0 +1,53 @@
+.popup {
+    display: none;
+    width: calc(100% - 40px);
+    max-width: 680px;
+    position: fixed;
+    z-index: 100;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    &.active {
+        display: block;
+    }
+    &__close {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: auto;
+        margin-bottom: 20px;
+        width: 52px;
+        height: 52px;
+        background: $accent;
+        border-radius: 50%;
+        position: relative;
+        &::before,
+        &::after {
+            content: '';
+            position: absolute;
+            width: 15px;
+            height: 2px;
+            border-radius: 2px;
+            background: #fff;
+        }
+        &::before {
+            transform: rotate(45deg);
+        }
+        &::after {
+            transform: rotate(-45deg);
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .popup {
+        &__close {
+            width: 62px;
+            height: 62px;
+            &::before,
+            &::after {
+                width: 20px;
+            }
+        }
+    }
+}

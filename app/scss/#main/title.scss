@@ -1,0 +1,17 @@
+.title {
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 24px;
+    color: $accent;
+    text-transform: uppercase;
+    span {
+        color: $titleColor;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .title {
+        font-size: 46px;
+        line-height: 46px;
+    }
+}

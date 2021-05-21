@@ -1,0 +1,18 @@
+html {
+    font-size: 16px;
+}
+
+body {
+    min-width: 360px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-x: hidden;
+    background: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    &.no-scroll {
+        overflow: hidden;
+    }
+}
